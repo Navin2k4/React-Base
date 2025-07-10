@@ -1,6 +1,9 @@
 # React Learn
 
+> ⚠ Dependencies may change. Keep them updated to ensure compatibility and security.
+
 A full-stack web application built with React and Express.js, featuring modern development practices and a clean monorepo structure.
+
 
 ## Repository Structure
 

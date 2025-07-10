@@ -1,8 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import PublicRoutes from "./routes/PublicRoutes";
+import PrivateRoutes from "./routes/PrivateRoutes";
+
 function App() {
   return (
-    <>
-      <h1 className="bg-red-50 p-4 text-center text-xl">Vite + React</h1>
-    </>
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/*" element={<PublicRoutes />} />
+      {/* Protected Routes */}
+      <Route path="/app/*" element={<PrivateRoutes />} />
+    </Routes>
   );
 }
 

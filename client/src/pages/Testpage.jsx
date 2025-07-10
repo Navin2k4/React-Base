@@ -1,5 +1,7 @@
 const Testpage = () => {
-  return <div>Testpage</div>;
-};
+  return (
+    <div>Testpage</div>
+  )
+}
 
-export default Testpage;
+export default Testpage

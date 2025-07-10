@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client", "dist")));
 
 // Catch-all handler should be LAST
-app.get("*", (req, res) => {
+app.get(/^\/(?!server\/).*/, (req, res) => {
   res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
@@ -51,6 +51,7 @@ app.use((err, req, res, next) => {
     }
   });
 })
+
 
 const port = process.env.PORT || 3000;
 
